@@ -1,0 +1,16 @@
+.logo {
+    display: flex;
+    font-size: 26px;
+    font-weight: 500;
+    align-items: center ;
+    color: var(--primary-color);
+}
+
+.header-logo__icon {
+    fill: currentColor;
+}
+
+.header-logo-after__icon {
+    margin-top: 12px;
+    fill: var(--grey-color);
+}
