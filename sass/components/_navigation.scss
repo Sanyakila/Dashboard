@@ -7,11 +7,6 @@
     }
 }
 
-.current {
-    background-color: var(--accent-color);
-    color: var(--background-color);
-}
-
 .site-nav__list {
     padding-top: 50px;
     margin-bottom: auto;
@@ -50,7 +45,10 @@
     height: 46px;
     border-radius: 8px;
 
-    color: var(--grey-color);
+    // color: var(--grey-color);
+
+    transition: background-color 300ms, linear,
+    color 300ms, linear;
 
     &:focus,
     &:hover {
@@ -70,8 +68,13 @@
     margin-right: 14px;
 }
 
-.site-nav__icon+.site-nav__icon {
+.site-nav__icon + .site-nav__icon {
     margin-left: auto;
+}
+
+.site-nav__link .current {
+    color: var(--background-color);
+    background-color: var(--accent-color);
 }
 
 .site-nav__box {

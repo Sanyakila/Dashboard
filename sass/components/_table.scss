@@ -1,7 +1,5 @@
 .section {
-    display: flex;
     
-
     background-color: var(--background-color);
 
     @media screen and (max-width: 767px) {
@@ -10,7 +8,8 @@
     }
 
         @media screen and (min-width: $tablet) {
-        gap: 30px;
+            display: flex;
+            gap: 30px;
         }
 
         @media screen and (min-width: $desktop) {
@@ -39,7 +38,7 @@ h2 + p {
     }
 }
 
-.table {
+.table-page {
     @media screen and (min-width: $tablet) {
      padding: 30px 10px;
      background-color: #fff;
@@ -121,77 +120,18 @@ h2 + p {
 
 // table
 
-.customer-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-left: 0;
-
-    font-size: 12px;
-    @media screen and (min-width: $desktop) {
-            font-size: 14px;
-            flex-wrap: nowrap;
-        }
+.table-responsive {
+    overflow-x: auto;
 }
-.customer-list__item {
-    flex-basis: calc((100% - 20px) / 2);
 
-    margin-top: 30px;
-    margin-bottom: 10px;
-    // border-bottom: 1px solid;
-
-    color: var(--grey-color);
-
+.pages-thumb {
+    margin-top: 32px;
     @media screen and (min-width: $tablet) {
-        flex-basis: calc((100% - 5px) / 3);
-    }
-
-        @media screen and (min-width: $desktop) {
-            flex-basis: calc((100% - 5px) / 6);
-            border-bottom: 1px solid;
-        }
-}
-@media screen and (max-width: 767px) {
-    .customer-list__item:nth-child(n + 5) {
-            border-bottom: 2px solid;
-        }
-}
-
-@media screen and (min-width: $tablet) and (max-width: 1439px) {
-.customer-list__item:nth-child(n + 4) {
-        border-bottom: 2px solid;
+        display: flex;
+        justify-content: space-between;
     }
 }
 
-.customer-list__text {
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    color: var(--primary-color);
-}
-
-.online {
-    display: block;
-    min-width: 80px;
-    border: 1px solid #00B087;
-    border-bottom: #00B087;
-    border-radius: 4px;
-    text-align: center;
-
-    color: #00B087;
-    background-color: rgb(22, 192, 152, 38%);
-}
-
-.offline {
-    display: block;
-    min-width: 80px;
-    border: 1px solid #DF0404;
-    border-radius: 4px;
-    text-align: center;
-
-    color: #DF0404;
-    background-color: #FFC5C5;
-}
 
 .text {
     text-align: center;
@@ -222,11 +162,6 @@ h2 + p {
     }
 }
 
-// .schedule-body>tr:hover {
-//     background-color: tomato;
-//     color: white;
-// }
-
 /* Table styling */
 .schedule {
     width: 100%;
@@ -235,20 +170,55 @@ h2 + p {
     font-size: 14px;
     font-weight: 500;
     text-align: left;
-}
-
-.shedule__string {
-    margin-bottom: 20px;
+    vertical-align: middle;
 }
 
 .schedule td {
-    padding: 8px;
+    padding: 19px;
     border-bottom: 1px solid #EEEEEE;
     color: var(--primary-color);
 }
 .schedule th {
-    padding: 8px;
+    padding: 19px;
     border-bottom: 1px solid #EEEEEE;
 
     color: #B5B7C0;
+}
+
+.tables:last-child {
+    display: inline-block;
+    margin-top: 29px;
+    margin-left: 10px;
+    padding: 6px;
+    width: 80px;
+    height: 29px;
+    border: 1px solid #00B087;
+    border-radius: 4px;
+    text-align: center;
+
+    color: #00B087;
+    background-color: rgb(22, 192, 152, 38%);
+
+    @media screen and (min-width: $desktop) {
+        margin-top: 13px;
+    }
+}
+
+.offline:last-child {
+        display: inline-block;
+        margin-top: 29px;
+        margin-left: 10px;
+        padding: 6px;
+        width: 80px;
+        height: 29px;
+        border: 1px solid #DF0404;
+        border-radius: 4px;
+        text-align: center;
+    
+        color: #DF0404;
+        background-color: #FFC5C5;
+
+        @media screen and (min-width: $desktop) {
+                margin-top: 13px;
+            }
 }

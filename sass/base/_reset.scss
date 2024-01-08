@@ -45,3 +45,8 @@ button {
     margin: 0;
     padding-left: 0;
 }
+
+.current {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
