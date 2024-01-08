@@ -1,13 +1,8 @@
-.header {
-    max-width: 250px;
-
-    @media screen and (min-width: $tablet) {
-        background-color: #fff;
-    }
-
-        @media screen and (min-width: $desktop) {
-            padding: 36px 28px;
-            max-width: 306px;
+.logo-box {
+    width: 250px;
+    background-color: #fff;
+    @media screen and (min-width: $desktop) {
+            width: 306px;
         }
 }
 
@@ -21,12 +16,19 @@
   padding-left: 10px;
   color: var(--primary-color);
 
+@media screen and (min-width: $desktop) {
+        padding-left: 28px;
+        padding-top: 36px;
+    }
+  
+
 // @media screen and (min-width: $tablet) {
 //         background-color: #fff;
 //     }
 }
 
 .header-logo__icon {
+    margin-right: 8px;
   fill: currentColor;
 }
 
@@ -35,25 +37,29 @@
   fill: var(--grey-color);
 }
 
-.title {
-  font-size: 24px;
-  font-weight: 400;
-  
-  @media screen and (max-width: 767px) {
-    margin-top: 30px;
-    text-align: center;
-  }
-
-  @media screen and (min-width: $tablet) {
-    position: absolute;
-    top: 6px;
-    right: 300px;
-  }
-
-  @media screen and (min-width: $desktop) {
-      position: absolute;
-      top: 52px;
-      left: 414px;
-  }
+header .container {
+    @media screen and (min-width: $tablet) {
+            display: flex;
+            align-items: center;
+        }
+    
 }
 
+.title {
+    font-size: 24px;
+    font-weight: 400;
+
+    @media screen and (max-width: 767px) {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-left: 37px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 36px;
+        margin-left: 107px;
+    }
+}
